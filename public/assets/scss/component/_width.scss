@@ -1,0 +1,46 @@
+/* Minimum width */
+.min-w-auto {
+    min-width: auto !important;
+}
+$min-w-array: 0;
+@each $min in $min-w-array {
+    .min-w-#{$min} {
+        min-width: toRem($min);
+    }
+}
+/* Maximum width */
+$max-w-array: 26, 50, 150, 282, 374, 432, 446, 456, 482, 487, 498, 510, 519, 536,
+    551, 576, 599, 650, 663, 692, 675, 713, 728, 892, 894;
+@each $max in $max-w-array {
+    .max-w-#{$max} {
+        max-width: toRem($max);
+    }
+}
+/* Width */
+$w-array: 16, 24, 25, 26, 30, 32, 41, 48, 105;
+@each $w in $w-array {
+    .w-#{$w} {
+        width: toRem($w) !important;
+    }
+}
+/* Minimum Height */
+$min-h-array: 0;
+@each $min in $min-h-array {
+    .min-h-#{$min} {
+        min-height: toRem($min) !important;
+    }
+}
+/* Maximum Height */
+$max-h-array: 50;
+@each $max in $max-h-array {
+    .max-h-#{$max} {
+        max-height: toRem($max);
+    }
+}
+/* Height */
+$h-array: 16, 24, 25, 26, 30, 32, 41, 48, 105, 157;
+@each $h in $h-array {
+    .h-#{$h} {
+        height: toRem($h) !important;
+    }
+}

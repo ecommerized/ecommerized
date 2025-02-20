@@ -1,0 +1,194 @@
+.zTab {
+    &-reset {
+        --bs-nav-link-padding-x: 0;
+        --bs-nav-link-padding-y: 0;
+        --bs-nav-link-font-weight: 400;
+        --bs-nav-link-color: #fff;
+        --bs-nav-tabs-border-width: 0;
+        --bs-nav-tabs-border-color: #fff;
+        --bs-nav-tabs-border-radius: 0;
+        --bs-nav-tabs-link-active-color: #fff;
+        --bs-nav-tabs-link-active-bg: #fff;
+        flex-wrap: nowrap;
+        border-bottom: none;
+    }
+    &-wrap {
+        display: flex;
+        justify-content: center;
+        margin-top: calc(-1 * toRem(49));
+    }
+    &-one {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: toRem(16);
+        margin-bottom: toRem(60);
+        @media screen and (max-width: 991px) {
+            margin-bottom: toRem(20);
+        }
+        @media screen and (max-width: 575px) {
+            gap: toRem(16) toRem(10);
+        }
+        .nav {
+            &-link {
+                position: relative;
+                padding: toRem(12) toRem(39);
+                background-color: $white;
+                border-radius: toRem(56);
+                white-space: nowrap;
+                @include fontFamily(16, $fw_bold, 28, $title-text);
+                box-shadow: 0px 4px 16px 0px $title-text-10;
+                transition: all 0.3s;
+                @media screen and (max-width: 991px) {
+                    padding: toRem(12) toRem(20);
+                }
+                @media screen and (max-width: 575px) {
+                    padding: toRem(10) toRem(15);
+                    font-size: toRem(14);
+                }
+                &.active {
+                    background-color: $button;
+                    color: $white !important;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+    &-two {
+        padding: toRem(6);
+        background-color: transparent;
+        border: toRem(1) solid $black-stroke;
+        border-radius: toRem(64);
+        .nav {
+            &-link {
+                width: 100%;
+                padding: toRem(12) toRem(40);
+                background-color: transparent;
+                border-radius: toRem(60);
+                white-space: nowrap;
+                @include fontFamily(16, $fw_bold, 28, $para-text);
+                @media screen and (max-width: 991px) {
+                    padding: toRem(12) toRem(20);
+                }
+                &.active {
+                    background-color: $button;
+                    color: $white !important;
+                }
+            }
+        }
+    }
+    &-three {
+        padding: toRem(6);
+        background-color: transparent;
+        border: toRem(1) solid $white-stroke;
+        border-radius: toRem(64);
+        .nav {
+            &-link {
+                width: 100%;
+                padding: toRem(12) toRem(40);
+                background-color: transparent;
+                border-radius: toRem(60);
+                white-space: nowrap;
+                @include fontFamily(16, $fw_bold, 28, $para-text);
+                @media screen and (max-width: 991px) {
+                    padding: toRem(12) toRem(20);
+                }
+                &.active {
+                    background-color: $button;
+                    color: $white !important;
+                }
+            }
+        }
+    }
+    &-four {
+        display: flex;
+        flex-wrap: wrap;
+        gap: toRem(12);
+        margin-bottom: toRem(26);
+        @media screen and (max-width: 991px) {
+            margin-bottom: toRem(20);
+        }
+        .nav {
+            &-link {
+                position: relative;
+                padding: toRem(12) toRem(36);
+                background-color: $white;
+                border: toRem(1) solid $black-stroke;
+                border-radius: toRem(56);
+                white-space: nowrap;
+                @include fontFamily(16, $fw_bold, 28, $title-text);
+                transition: all 0.3s;
+                @media screen and (max-width: 991px) {
+                    padding: toRem(12) toRem(20);
+                }
+                @media screen and (max-width: 575px) {
+                    padding: toRem(10) toRem(15);
+                    font-size: toRem(14);
+                }
+                &.active {
+                    border-color: $button;
+                    background-color: $button;
+                    color: $white !important;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+    &-five {
+        @media screen and (max-width: 575px) {
+            justify-content: center;
+            gap: toRem(10);
+            padding-bottom: toRem(20);
+        }
+        .nav {
+            &-link {
+                position: relative;
+                padding: toRem(0) toRem(15) toRem(29);
+                background-color: transparent;
+                border-radius: 0;
+                white-space: nowrap;
+                @include fontFamily(14, $fw_semiBold, 24, $para-text);
+                display: flex;
+                align-items: center;
+                gap: toRem(10);
+                @media screen and (max-width: 575px) {
+                    padding: toRem(10);
+                    background-color: $white;
+                    border-radius: toRem(5);
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0%;
+                    height: toRem(2);
+                    background-color: $button;
+                    transition: all 0.3s;
+                    @media screen and (max-width: 575px) {
+                        display: none;
+                    }
+                }
+                &.active {
+                    background-color: transparent;
+                    color: $button;
+                    @media screen and (max-width: 575px) {
+                        background-color: $button !important;
+                        color: $white;
+                    }
+                    &::before {
+                        width: 100%;
+                    }
+                    svg {
+                        circle {
+                            stroke: $button;
+                        }
+                        path {
+                            fill: $button;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

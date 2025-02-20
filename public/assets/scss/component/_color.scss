@@ -1,0 +1,75 @@
+$theme-colors: (
+    "white": var(--white),
+    "white-5": var(--white-5),
+    "white-10": var(--white-10),
+    "white-15": var(--white-15),
+    "white-20": var(--white-20),
+    "white-60": var(--white-60),
+    "white-70": var(--white-70),
+    "white-80": var(--white-80),
+    "black": var(--black),
+    "button": var(--button),
+    "button-5": var(--button-5),
+    "button-16": var(--button-16),
+    "title-text": var(--title-text),
+    "para-text": var(--para-text),
+    "white-para": var(--white-para),
+    "frame": var(--frame),
+    "stroke": var(--stroke),
+    "black-stroke": var(--black-stroke),
+    "white-stroke": var(--white-stroke),
+    "bg": var(--bg),
+    "icon-color": var(--icon-color),
+    "process-one": var(--process-one),
+    "sidebar-text": var(--sidebar-text),
+    "sidebar-active": var(--sidebar-active),
+    "scroll-track": var(--scroll-track),
+    "scroll-thumb": var(--scroll-thumb),
+    "title-text-10": var(--title-text-10),
+    "task-progress": var(--task-progress),
+    "task-done": var(--task-done),
+    "task-pending": var(--task-pending),
+    "task-review": var(--task-review),
+    "task-label-bg-1": var(--task-label-bg-1),
+    "task-label-text-1": var(--task-label-text-1),
+    "task-label-bg-2": var(--task-label-bg-2),
+    "task-label-text-2": var(--task-label-text-2),
+    "task-label-bg-3": var(--task-label-bg-3),
+    "task-label-text-3": var(--task-label-text-3),
+    "color2-10": var(--color2-10),
+    "green-10": var(--green-10),
+    "color1-10": var(--color1-10),
+    "main-color-10": var(--main-color-10),
+    "purple-10": var(--purple-10),
+    "badge-deactivate-bg": var(--badge-deactivate-bg),
+    "badge-deactivate-text": var(--badge-deactivate-text),
+    "badge-open-bg": var(--badge-open-bg),
+    "badge-open-text": var(--badge-open-text),
+    "badge-pending-bg": var(--badge-pending-bg),
+    "badge-pending-text": var(--badge-pending-text),
+    "badge-closed-bg": var(--badge-closed-bg),
+    "badge-closed-text": var(--badge-closed-text),
+    "badge-trashed-bg": var(--badge-trashed-bg),
+    "badge-trashed-text": var(--badge-trashed-text),
+    "badge-working-bg": var(--badge-working-bg),
+    "badge-working-text": var(--badge-working-text),
+    "badge-trackOrder-bg": var(--badge-trackOrder-bg),
+    "badge-trackOrder-text": var(--badge-trackOrder-text),
+);
+@each $key, $color in $theme-colors {
+    .text-#{$key} {
+        color: $color !important;
+    }
+}
+/* Background Color */
+@each $key, $color in $theme-colors {
+    .bg-#{$key} {
+        background-color: $color !important;
+    }
+}
+/* Border Color */
+@each $key, $color in $theme-colors {
+    .bd-c-#{$key} {
+        border-color: $color !important;
+    }
+}

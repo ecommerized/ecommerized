@@ -1,0 +1,250 @@
+/* Form */
+.zForm-label {
+    margin-bottom: toRem(8);
+    font-size: toRem(14);
+    font-weight: $fw_medium;
+    line-height: toRem(20);
+    color: $title-text;
+    span {
+        color: $button;
+    }
+    &-alt {
+        margin-bottom: toRem(11);
+        font-size: toRem(14);
+        font-weight: $fw_bold;
+        line-height: toRem(24);
+        color: $title-text;
+        span {
+            color: $button;
+        }
+    }
+    &-frontend {
+        margin-bottom: toRem(11);
+        font-size: toRem(20);
+        font-weight: $fw_bold;
+        line-height: toRem(30);
+        color: $title-text;
+        span {
+            color: $button;
+        }
+    }
+}
+.zForm-control {
+    display: block;
+    width: 100%;
+    padding: toRem(13) toRem(20) toRem(15);
+    font-size: toRem(14);
+    font-weight: $fw_regular;
+    line-height: toRem(22);
+    color: $title-text;
+    background-color: $white;
+    background-clip: padding-box;
+    border: toRem(1) solid $black-stroke;
+    border-radius: toRem(8);
+    appearance: none;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    &:focus,
+    &:hover {
+        border: toRem(1) solid $button;
+        color: $title-text !important;
+        background-color: $white !important;
+        box-shadow: 0 0 0 rgb(0 0 0 / 0);
+    }
+    &::placeholder {
+        font-size: toRem(14);
+        font-weight: $fw_regular;
+        line-height: toRem(22);
+        color: $para-text;
+    }
+    &-alt {
+        display: block;
+        width: 100%;
+        padding: toRem(16) toRem(16) toRem(16) toRem(40);
+        font-size: toRem(16);
+        font-weight: $fw_medium;
+        line-height: toRem(26);
+        color: $title-text;
+        background-color: $frame;
+        background-clip: padding-box;
+        border: toRem(1) solid $frame;
+        border-radius: toRem(60);
+        appearance: none;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        &:focus,
+        &:hover {
+            border: toRem(1) solid $button;
+            color: $para-text !important;
+            background-color: $frame !important;
+            box-shadow: 0 0 0 rgb(0 0 0 / 0);
+        }
+        &::placeholder {
+            font-size: toRem(16);
+            font-weight: $fw_medium;
+            line-height: toRem(26);
+            color: $para-text;
+        }
+    }
+    &-frontend {
+        display: block;
+        width: 100%;
+        padding: toRem(12) toRem(25);
+        font-size: toRem(18);
+        font-weight: $fw_medium;
+        line-height: toRem(28);
+        color: $title-text;
+        background-color: $white;
+        background-clip: padding-box;
+        border: toRem(1) solid $black-stroke;
+        border-radius: toRem(5);
+        appearance: none;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        &:focus,
+        &:hover {
+            border: toRem(1) solid $button;
+            color: $title-text !important;
+            background-color: $white !important;
+            box-shadow: 0 0 0 rgb(0 0 0 / 0);
+        }
+        &::placeholder {
+            font-size: toRem(18);
+            font-weight: $fw_medium;
+            color: $para-text;
+        }
+    }
+}
+textarea {
+    &.zForm-control-alt {
+        resize: none;
+        min-height: toRem(160);
+    }
+}
+.form-select,
+.form-select-lg {
+    font-size: toRem(14);
+    font-weight: $fw_regular;
+    line-height: toRem(22);
+    color: $title-text;
+    padding: toRem(13) toRem(30) toRem(15) toRem(20);
+}
+/* Checkbox */
+.zForm-wrap-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: toRem(10);
+    input {
+        &.form-check-input {
+            margin-top: toRem(8);
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+            border: toRem(1) solid $para-text;
+            border-radius: toRem(2);
+            background-color: $white;
+            &:checked {
+                background-color: $button !important;
+                border-color: $button !important;
+            }
+        }
+    }
+    label {
+        @include fontFamily(18, $fw_medium, 28, $para-text);
+        a {
+            color: $button;
+        }
+    }
+    &.rememberMe-checkbox {
+        input {
+            &.form-check-input {
+                margin-top: toRem(5);
+                box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+                border: toRem(1) solid $title-text;
+                border-radius: 50%;
+                background-color: $white;
+                &:checked {
+                    background-color: $button !important;
+                    border-color: $button !important;
+                }
+            }
+        }
+        label {
+            @include fontFamily(16, $fw_medium, 26, $title-text);
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+    &-img {
+        display: flex;
+        align-items: flex-start;
+        gap: toRem(10);
+        input {
+            &.form-check-input {
+                margin-top: toRem(5);
+                box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+                border: toRem(1) solid $para-text;
+                border-radius: toRem(2);
+                background-color: $white;
+                &:checked {
+                    background-color: $button !important;
+                    border-color: $button !important;
+                }
+            }
+        }
+        label {
+            @include fontFamily(18, $fw_medium, 0, $para-text);
+            a {
+                color: $button;
+            }
+        }
+    }
+}
+/* Radio */
+.zForm-wrap-radio {
+    display: flex;
+    align-items: center;
+    gap: toRem(12);
+    input {
+        &.form-check-input {
+            margin-top: 0;
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+            border: toRem(2) solid $black-stroke;
+            background-color: $white;
+            background-size: toRem(8);
+            &:checked {
+                --bs-form-check-bg-image: url("../images/icon/radio-circle.svg");
+                background-color: $button;
+                border-color: $button;
+            }
+        }
+    }
+    label {
+        @include fontFamily(14, $fw_medium, 24, $para-text);
+    }
+}
+/* Switch */
+.zCheck {
+    &.form-switch {
+        min-height: 27px;
+        input.form-check-input {
+            width: 53px;
+            height: 27px;
+            margin-top: 0;
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+            border: 1px solid $scroll-track;
+            border-radius: 100px;
+            background-color: $scroll-track;
+            background-image: url(../images/icon/switch-circle.svg);
+            background-size: 23px;
+            background-position-x: 3px;
+            &:checked {
+                background-color: $badge-open-text;
+                border-color: $badge-open-text;
+                background-position-x: 26px;
+            }
+        }
+    }
+    label {
+        font-size: 13px;
+        font-weight: $fw_medium;
+        line-height: 16px;
+        color: #000;
+    }
+}

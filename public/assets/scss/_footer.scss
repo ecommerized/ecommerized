@@ -1,0 +1,111 @@
+.footer {
+    &-section {
+        padding: toRem(206) 0 toRem(20);
+        background-color: $title-text;
+        .topArea {
+            padding-bottom: toRem(80);
+            @media screen and (max-width: 767px) {
+                padding-bottom: toRem(40);
+            }
+        }
+        .bottomArea {
+            padding-top: toRem(18);
+            border-top: toRem(1) solid $white-20;
+        }
+    }
+    &-title {
+        @include fontFamily(22, $fw_semiBold, 42, $white);
+        padding-bottom: toRem(20);
+    }
+    &-info {
+        @include fontFamily(16, $fw_medium, 26, $white-para);
+        padding-bottom: toRem(34);
+    }
+    &-menu {
+        li {
+            padding-bottom: toRem(18);
+            &:last-child {
+                padding-bottom: 0;
+            }
+            a {
+                position: relative;
+                display: inline-block;
+                @include fontFamily(16, $fw_regular, 26, $white-para);
+                transition: all 0.3s;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0%;
+                    height: toRem(1);
+                    background-color: $button;
+                    background-position: bottom right;
+                    transition: all 0.3s;
+                }
+                &:hover {
+                    color: $button !important;
+                    &::before {
+                        width: 100%;
+                        background-position: bottom left;
+                    }
+                }
+            }
+        }
+    }
+    &-contact-items {
+        li {
+            padding-bottom: toRem(22);
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+    &-contact-item {
+        display: inline-flex;
+        align-items: center;
+        gap: toRem(16);
+        .text {
+            @include fontFamily(16, $fw_regular, 26, $white-para);
+        }
+        svg {
+            path {
+                fill: $button;
+            }
+        }
+    }
+    &-logo {
+        display: flex;
+        max-width: toRem(163);
+        margin-bottom: toRem(32);
+        @media screen and (max-width: 767px) {
+            margin: 0 auto;
+        }
+    }
+    &-copywrite {
+        @include fontFamily(16, $fw_medium, 22, $white);
+        text-align: center;
+        .link {
+            color: $white;
+            text-decoration: underline;
+        }
+    }
+    &-social-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: toRem(40);
+        height: toRem(40);
+        border-radius: 50%;
+        background-color: $white-5;
+        transition: all 0.3s;
+        svg {
+            path {
+                fill: $white;
+            }
+        }
+        &:hover {
+            background-color: $button;
+        }
+    }
+}

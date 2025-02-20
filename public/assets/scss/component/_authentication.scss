@@ -1,0 +1,244 @@
+.zMain {
+    &-signLog {
+        &-content {
+            max-width: toRem(757);
+            margin: 0 auto;
+            @media screen and (min-width: 992px) {
+                height: 100vh;
+            }
+            @media screen and (max-width: 991px) {
+                min-height: 100vh;
+            }
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+
+.signLog-section {
+    @media screen and (min-width: 992px) {
+        height: 100vh;
+    }
+    @media screen and (max-width: 991px) {
+        min-height: 100vh;
+        padding: toRem(50) 0;
+    }
+    display: flex;
+    background-color: #fff;
+    overflow-y: hidden;
+    .left,
+    .right {
+        width: 50%;
+        height: 100%;
+    }
+    .left {
+        padding: 30px;
+        border-radius: toRem(20);
+        @media screen and (max-width: 991px) {
+            width: 100%;
+        }
+        @media screen and (max-width: 575px) {
+            padding: 10px;
+        }
+        .wrap {
+            height: 100%;
+        }
+    }
+    .right {
+        position: relative;
+        @media screen and (max-width: 991px) {
+            display: none;
+        }
+    }
+}
+
+/*  */
+.sign-up-page {
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    @media screen and (max-width: 1199px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.sign-up-left-content,
+.sign-up-right-content {
+    min-height: 80vh;
+    height: 100%;
+}
+.sign-up {
+    &-left-content {
+        max-width: toRem(822);
+        padding: toRem(32) 0 toRem(32) toRem(32);
+        @media screen and (max-width: 1199px) {
+            display: none;
+        }
+        .wrap {
+            min-height: toRem(880);
+            border-radius: toRem(20);
+            padding: toRem(24);
+            display: flex;
+            align-items: flex-end;
+            @media screen and (max-width: 1500px) {
+                min-height: toRem(605);
+            }
+            .content {
+                width: 100%;
+                background-color: $button;
+                padding: toRem(50) toRem(20);
+                border-radius: toRem(16);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: toRem(60);
+                .logo {
+                    flex-shrink: 0;
+                    max-width: toRem(163);
+                }
+                .title {
+                    max-width: toRem(405);
+                    padding-left: toRem(60);
+                    @include fontFamily(32, $fw_bold, 42, $white);
+                    border-left: toRem(1) solid $white;
+                }
+            }
+        }
+    }
+    &-right-content {
+        display: flex;
+        align-items: center;
+        padding: 0 toRem(32);
+        @media screen and (max-width: 1199px) {
+            padding: toRem(32) toRem(20);
+        }
+        .wrap {
+            width: 100%;
+            max-width: toRem(786);
+            margin: 0 auto;
+            .text-content {
+                padding-bottom: toRem(34);
+                .title {
+                    @include fontFamily(40, $fw_semiBold, 50, $title-text);
+                    padding-bottom: toRem(15);
+                }
+                .info {
+                    @include fontFamily(16, $fw_medium, 26, $title-text);
+                    .link {
+                        color: $button !important;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+/* Rember Forgot */
+.remeberForgot {
+    padding: toRem(20) 0 toRem(38);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .forgotPass {
+        @include fontFamily(16, $fw_medium, 26, $button);
+        text-decoration: underline;
+    }
+}
+/* passShowHide */
+.passShowHide {
+    position: relative;
+    button {
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        position: absolute;
+        bottom: toRem(18);
+        right: toRem(25);
+        color: $para-text;
+        font-weight: 400;
+    }
+}
+/* OTP */
+.otp-input-fields {
+    display: flex;
+    gap: toRem(10);
+    input {
+        flex: 1 1 auto;
+        max-width: toRem(117);
+        width: 100%;
+        height: toRem(52);
+        border: toRem(1) solid $black-stroke;
+        border-radius: toRem(5);
+        background-color: $white;
+        @include fontFamily(36, $fw_bold, 46, $para-text);
+        text-align: center;
+        @media screen and (max-width: 575px) {
+            height: toRem(70);
+        }
+        &:focus,
+        &:hover {
+            border-color: $button;
+        }
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    }
+}
+/* Other Auth */
+.otherAuthWrap {
+    padding-bottom: toRem(34);
+    .text {
+        position: relative;
+        text-align: center;
+        @include fontFamily(16, $fw_medium, 26, $para-text);
+        span {
+            position: relative;
+            display: inline-block;
+            background-color: $white;
+            padding: 0 toRem(32);
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 100%;
+            height: toRem(1);
+            background-color: $black-stroke;
+        }
+    }
+    .authList {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: toRem(16);
+        padding-bottom: toRem(32);
+        li {
+            @media screen and (min-width: 768px) {
+                width: 100%;
+            }
+        }
+        .item {
+            width: 100%;
+            padding: toRem(18);
+            border-radius: toRem(60);
+            background-color: $frame;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: toRem(8);
+            img {
+                max-width: toRem(24);
+            }
+            span {
+                @include fontFamily(16, $fw_medium, 26, $title-text);
+                @media screen and (max-width: 767px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
